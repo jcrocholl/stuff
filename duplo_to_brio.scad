@@ -9,10 +9,17 @@
 
 resolution = 100;
 
+module saga() {
+  translate([0, -19, 1]) rotate([90, 0, 0]) scale([0.13, 0.13, 0.3])
+    import("saga.stl");
+}
+
 module duplo_to_brio()
 {
 	union()
 	{
+        saga();
+        rotate([0, 0, 180]) saga();
         translate([37, 0, -9.75])
           # cube([12, 32, 0.5], center=true);
         translate([-37, 0, -9.75])
