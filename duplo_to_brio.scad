@@ -13,6 +13,10 @@ module duplo_to_brio()
 {
 	union()
 	{
+        translate([37, 0, -9.75])
+          # cube([12, 32, 0.5], center=true);
+        translate([-37, 0, -9.75])
+          # cube([12, 32, 0.5], center=true);
 		difference()
 		{
 			union()
