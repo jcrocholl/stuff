@@ -14,12 +14,17 @@ module saga() {
     import("saga.stl");
 }
 
+module twentyfourteen() {
+  translate([0, -19, 1]) rotate([90, 0, 0]) scale([0.13, 0.13, 0.3])
+    import("2014.stl");
+}
+
 module duplo_to_brio()
 {
 	union()
 	{
         saga();
-        rotate([0, 0, 180]) saga();
+        rotate([0, 0, 180]) twentyfourteen();
         translate([37, 0, -9.75])
           # cube([12, 32, 0.5], center=true);
         translate([-37, 0, -9.75])
